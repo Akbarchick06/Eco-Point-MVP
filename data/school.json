@@ -1,0 +1,290 @@
+{
+  "users": [
+    {
+      "id": "u_admin",
+      "name": "Администратор",
+      "email": "admin@school.local",
+      "passwordHash": "af11efb6b6ff3a908e6da3d27db5fb2b:6a13307963396bcb7f07dc5e387e7b02e4050625844c06cc6b2b89e8f753509327de44371b65055cccabd2bdc52423d38ea5290e4a5042554164cdec21dcf248",
+      "role": "admin",
+      "group": "Администрация",
+      "school": "Демо-школа",
+      "points": 0,
+      "blocked": false,
+      "createdAt": "2026-06-10T11:22:30.999Z"
+    },
+    {
+      "id": "u_teacher",
+      "name": "Айгүл Мугалимова",
+      "email": "teacher@school.local",
+      "passwordHash": "56c79bb3d9eb67ccbcbe59a6723908f5:55dc4681147ffa675a4ddaa729c56b65824436e397f7ae8111d9a91b5d1beebb9bf08bc235b84182aad8ab20084fa3b5d72a40fa5bffbc92e5a3e55b7db6ad4e",
+      "role": "teacher",
+      "group": "Учителя",
+      "school": "Демо-школа",
+      "points": 0,
+      "blocked": false,
+      "createdAt": "2026-06-10T11:22:30.999Z"
+    },
+    {
+      "id": "u_student",
+      "name": "Бектур Ашимов",
+      "email": "student@school.local",
+      "passwordHash": "296de614d9f074a2d3ea7b7f420731d3:a926566862fe029fcb3e09826431cbb333563649704c36b1a6dbe34cbe8a84ec17f1fcc9b487dcd4db01aa9783a80183c055d6d149590928e313bafc4485a455",
+      "role": "student",
+      "group": "9-А",
+      "school": "Демо-школа",
+      "points": 75,
+      "blocked": false,
+      "createdAt": "2026-06-10T11:22:30.999Z"
+    },
+    {
+      "id": "u_student2",
+      "name": "Айдана Садыкова",
+      "email": "student2@school.local",
+      "passwordHash": "498a05550b74d367ad749a7a806382b3:5d1297083ce962e536f26bb91610bb971e73bd7d78f90ee5f410da8ab7b6132f250133585ced54b1a423c07cdddd7f33d659cf372c0dff9b3c081cba40eef730",
+      "role": "student",
+      "group": "10-Б",
+      "school": "Демо-школа",
+      "points": 35,
+      "blocked": false,
+      "createdAt": "2026-06-10T11:22:30.999Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat_study",
+      "title": "Учёба",
+      "titleKy": "Окуу",
+      "color": "#2563eb",
+      "createdAt": "2026-06-10T11:22:30.999Z"
+    },
+    {
+      "id": "cat_project",
+      "title": "Проекты",
+      "titleKy": "Долбоорлор",
+      "color": "#7c3aed",
+      "createdAt": "2026-06-10T11:22:30.999Z"
+    },
+    {
+      "id": "cat_social",
+      "title": "Общественная активность",
+      "titleKy": "Коомдук активдүүлүк",
+      "color": "#059669",
+      "createdAt": "2026-06-10T11:22:30.999Z"
+    },
+    {
+      "id": "cat_contest",
+      "title": "Конкурсы",
+      "titleKy": "Сынактар",
+      "color": "#ea580c",
+      "createdAt": "2026-06-10T11:22:30.999Z"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task_1",
+      "title": "Сделать мини-проект по экологии",
+      "description": "Подготовьте короткую презентацию или постер на тему сохранения природы. Можно загрузить фото, PDF или ссылку на презентацию.",
+      "categoryId": "cat_project",
+      "difficulty": "medium",
+      "points": 25,
+      "deadline": "2026-06-17",
+      "requirements": "Минимум 5 слайдов или 1 постер. Добавьте вывод и личное мнение.",
+      "status": "published",
+      "createdBy": "u_teacher",
+      "createdAt": "2026-06-10T11:22:30.999Z",
+      "updatedAt": "2026-06-10T11:22:30.999Z"
+    },
+    {
+      "id": "task_2",
+      "title": "Принять участие в олимпиаде или конкурсе",
+      "description": "Загрузите подтверждение участия: фото сертификата, скрин регистрации или ссылку.",
+      "categoryId": "cat_contest",
+      "difficulty": "hard",
+      "points": 50,
+      "deadline": "2026-06-24",
+      "requirements": "Подтверждение участия обязательно.",
+      "status": "published",
+      "createdBy": "u_teacher",
+      "createdAt": "2026-06-10T11:22:30.999Z",
+      "updatedAt": "2026-06-10T11:22:30.999Z"
+    },
+    {
+      "id": "task_3",
+      "title": "Помочь однокласснику разобраться с темой",
+      "description": "Опишите, кому и в какой теме помогли. Можно приложить фото конспекта или короткий отчёт.",
+      "categoryId": "cat_social",
+      "difficulty": "easy",
+      "points": 10,
+      "deadline": "2026-06-15",
+      "requirements": "Короткий отчёт 5–7 предложений.",
+      "status": "published",
+      "createdBy": "u_teacher",
+      "createdAt": "2026-06-10T11:22:30.999Z",
+      "updatedAt": "2026-06-10T11:22:30.999Z"
+    }
+  ],
+  "submissions": [
+    {
+      "id": "sub_1",
+      "taskId": "task_3",
+      "studentId": "u_student",
+      "comment": "Помог однокласснику повторить HTML-теги и структуру страницы.",
+      "file": null,
+      "status": "approved",
+      "pointsAwarded": 10,
+      "teacherComment": "Хорошая активность. Продолжай помогать другим.",
+      "reviewedBy": "u_teacher",
+      "createdAt": "2026-06-10T11:22:30.999Z",
+      "reviewedAt": "2026-06-10T11:22:30.999Z"
+    }
+  ],
+  "partners": [
+    {
+      "id": "partner_1",
+      "name": "BookHouse",
+      "description": "Скидки на книги и канцтовары",
+      "contact": "+996 700 000 001",
+      "createdAt": "2026-06-10T11:22:30.999Z"
+    },
+    {
+      "id": "partner_2",
+      "name": "IT Course Center",
+      "description": "Бонусы на IT-курсы",
+      "contact": "+996 700 000 002",
+      "createdAt": "2026-06-10T11:22:30.999Z"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "reward_1",
+      "title": "Скидка 10% на канцтовары",
+      "description": "Промокод от партнёра BookHouse.",
+      "partnerId": "partner_1",
+      "cost": 50,
+      "stock": 20,
+      "type": "discount",
+      "active": true,
+      "createdAt": "2026-06-10T11:22:30.999Z"
+    },
+    {
+      "id": "reward_2",
+      "title": "Сертификат активного участника",
+      "description": "Именной электронный сертификат, который появляется в профиле после получения.",
+      "partnerId": null,
+      "cost": 50,
+      "stock": 1000,
+      "type": "certificate",
+      "active": true,
+      "createdAt": "2026-06-10T11:22:30.999Z"
+    },
+    {
+      "id": "reward_3",
+      "title": "Розыгрыш мерча",
+      "description": "Участие в розыгрыше фирменного мерча.",
+      "partnerId": "partner_2",
+      "cost": 30,
+      "stock": 50,
+      "type": "lottery",
+      "active": true,
+      "createdAt": "2026-06-10T11:22:30.999Z"
+    }
+  ],
+  "redemptions": [],
+  "pointTransactions": [
+    {
+      "id": "pt_seed_1",
+      "userId": "u_student",
+      "amount": 65,
+      "type": "bonus",
+      "reason": "Стартовые демо-баллы",
+      "createdAt": "2026-06-10T11:22:30.999Z"
+    },
+    {
+      "id": "pt_seed_2",
+      "userId": "u_student",
+      "amount": 10,
+      "type": "task",
+      "reason": "Помощь однокласснику разобраться с темой",
+      "submissionId": "sub_1",
+      "createdAt": "2026-06-10T11:22:30.999Z"
+    },
+    {
+      "id": "pt_seed_3",
+      "userId": "u_student2",
+      "amount": 35,
+      "type": "bonus",
+      "reason": "Стартовые демо-баллы",
+      "createdAt": "2026-06-10T11:22:30.999Z"
+    }
+  ],
+  "badges": [
+    {
+      "id": "badge_first",
+      "title": "Первый шаг",
+      "titleKy": "Биринчи кадам",
+      "description": "Первое выполненное задание",
+      "icon": "🌱",
+      "minPoints": 0,
+      "rule": "first_approved"
+    },
+    {
+      "id": "badge_100",
+      "title": "Активист",
+      "titleKy": "Активист",
+      "description": "Набрал 100 баллов",
+      "icon": "⭐",
+      "minPoints": 100,
+      "rule": "points"
+    },
+    {
+      "id": "badge_250",
+      "title": "Лидер",
+      "titleKy": "Лидер",
+      "description": "Набрал 250 баллов",
+      "icon": "🏆",
+      "minPoints": 250,
+      "rule": "points"
+    },
+    {
+      "id": "badge_helper",
+      "title": "Помощник",
+      "titleKy": "Жардамчы",
+      "description": "Выполнил социальное задание",
+      "icon": "🤝",
+      "minPoints": 0,
+      "rule": "social_task"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "n_mq7zcgqe97857782",
+      "userId": "u_student",
+      "text": "Выполнен вход в аккаунт.",
+      "read": false,
+      "createdAt": "2026-06-10T11:23:02.198Z"
+    },
+    {
+      "id": "n_mq7zbsnr4a7a92cf",
+      "userId": "u_student",
+      "text": "Добро пожаловать! Выполняй задания и получай баллы.",
+      "read": false,
+      "createdAt": "2026-06-10T11:22:30.999Z"
+    },
+    {
+      "id": "n_mq7zbsnra2372b8f",
+      "userId": "u_teacher",
+      "text": "У вас есть демо-задания. Можно создать новое задание.",
+      "read": false,
+      "createdAt": "2026-06-10T11:22:30.999Z"
+    }
+  ],
+  "settings": {
+    "points": {
+      "easy": 10,
+      "medium": 25,
+      "hard": 50,
+      "contestWin": 100
+    },
+    "appName": "Edu Motivation Platform"
+  }
+}

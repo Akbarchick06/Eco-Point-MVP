@@ -1,0 +1,16 @@
+{
+  "name": "edu-motivation-platform",
+  "version": "2.2.0",
+  "description": "MVP платформы мотивации учеников и студентов через задания, баллы, рейтинг и награды",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "reset:data": "node scripts/reset-data.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

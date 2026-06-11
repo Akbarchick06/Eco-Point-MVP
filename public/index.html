@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edu Motivation Platform</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="app">
+    <div class="loading-screen">
+      <div class="loader"></div>
+      <p>Загрузка платформы...</p>
+    </div>
+  </div>
+  <template id="landing-template">
+    <header class="topbar glass">
+      <div class="brand">
+        <div class="brand-logo">EDU</div>
+        <div>
+          <strong>Edu Motivation</strong>
+          <span>Баллы • задания • награды</span>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button class="ghost small" data-action="lang">KY/RU</button>
+        <button class="ghost small" data-action="show-login">Войти</button>
+        <button class="primary small" data-action="show-register">Регистрация</button>
+      </div>
+    </header>
+    <main class="landing">
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="pill">Платформа мотивации учеников и студентов</span>
+          <h1>Выполняй задания, участвуй в проектах и получай баллы за развитие.</h1>
+          <p>Учителя публикуют задания, ученики загружают отчёты, система начисляет баллы, рейтинг и награды от партнёров.</p>
+          <div class="hero-actions">
+            <button class="primary" data-action="show-register">Начать как ученик</button>
+            <button class="secondary" data-action="demo-login" data-email="teacher@school.local">Войти как учитель</button>
+          </div>
+          <div class="demo-logins">
+            <button data-action="demo-login" data-email="admin@school.local">Админ demo</button>
+            <button data-action="demo-login" data-email="teacher@school.local">Учитель demo</button>
+            <button data-action="demo-login" data-email="student@school.local">Ученик demo</button>
+          </div>
+        </div>
+        <div class="hero-card glass">
+          <div class="score-circle">
+            <strong>75</strong>
+            <span>баллов</span>
+          </div>
+          <h3>Бектур Ашимов</h3>
+          <p>9-А • 3 задания • 2 значка</p>
+          <div class="mini-list">
+            <span>🌱 Первый шаг</span>
+            <span>🤝 Помощник</span>
+            <span>🎁 Доступно 3 награды</span>
+          </div>
+        </div>
+      </section>
+      <section class="features">
+        <article><b>📌 Задания</b><span>Конкурсы, проекты, активность, отчёты.</span></article>
+        <article><b>⭐ Баллы</b><span>10 / 25 / 50 / 100 баллов за результат.</span></article>
+        <article><b>🏆 Рейтинг</b><span>Мотивация через достижения и лидерборд.</span></article>
+        <article><b>🎁 Награды</b><span>Скидки, сертификаты, курсы и подарки.</span></article>
+      </section>
+    </main>
+    <div class="auth-modal hidden" id="auth-modal">
+      <div class="modal-card">
+        <button class="close" data-action="close-auth">×</button>
+        <div class="tabs">
+          <button class="tab active" data-auth-tab="login">Вход</button>
+          <button class="tab" data-auth-tab="register">Регистрация</button>
+        </div>
+        <form id="login-form" class="auth-form">
+          <h2>Войти в систему</h2>
+          <label>Email<input name="email" type="email" value="student@school.local" required></label>
+          <label>Пароль<input name="password" type="password" value="demo123" required></label>
+          <button class="primary full">Войти</button>
+        </form>
+        <form id="register-form" class="auth-form hidden">
+          <h2>Создать аккаунт ученика</h2>
+          <label>ФИО<input name="name" required placeholder="Например: Асан уулу Нурислам"></label>
+          <label>Email<input name="email" type="email" required placeholder="email@example.com"></label>
+          <label>Пароль<input name="password" type="password" minlength="6" required></label>
+          <label>Класс / группа<input name="group" placeholder="9-А, ИС-21"></label>
+          <label>Школа / вуз<input name="school" placeholder="Название учреждения"></label>
+          <button class="primary full">Зарегистрироваться</button>
+        </form>
+      </div>
+    </div>
+  </template>
+  <script src="/app.js"></script>
+</body>
+</html>
