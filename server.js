@@ -756,9 +756,6 @@ async function handleApi(req, res, db) {
     if (!user) return;
     let submissions = db.submissions;
     if (user.role === 'student') submissions = submissions.filter(s => s.studentId === user.id);
-    // В MVP учитель/организатор видит все отправленные работы,
-    // чтобы кабинет проверки сразу обновлялся независимо от того, кто создал задание.
-    // Админ также видит все работы.
     const status = url.searchParams.get('status');
     if (status) submissions = submissions.filter(s => s.status === status);
     return send(res, 200, { ok: true, submissions: submissions.map(s => getSubmissionView(db, s)) });
@@ -772,12 +769,11 @@ async function handleApi(req, res, db) {
     if (!submission) return sendError(res, 404, 'Работа не найдена');
     const task = db.tasks.find(t => t.id === submission.taskId);
     if (!task) return sendError(res, 404, 'Задание не найдено');
-    // В MVP любой учитель/организатор может проверить отправленную работу.
-    // Если нужна строгая привязка к автору задания, это правило можно вернуть.
     if (submission.status !== 'pending') return sendError(res, 409, 'Эта работа уже проверена');
     const body = await getBody(req);
     const status = body.status === 'approved' ? 'approved' : body.status === 'rejected' ? 'rejected' : null;
     if (!status) return sendError(res, 400, 'Укажите approved или rejected');
+
     submission.status = status;
     submission.reviewedBy = user.id;
     submission.reviewedAt = now();
